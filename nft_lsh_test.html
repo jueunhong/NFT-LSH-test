@@ -4,46 +4,86 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta name="description" content="NFT 이상형 테스트입니다.">
+    	<meta name="keywords" content="Web3, NFT, 이상형 테스트">
+		<title>NFT WorldCup</title>
 	
 	<!-- CSS STYLE -->
 	<link rel="stylesheet" href="css/nft_lsh_test.css">
+	<link rel="stylesheet" href="css/reset.css">
 	
 	</head>
 	<body>
-		<h1>NFT <br> WorldCup</h1>
-		<h3> Find out your favorite NFT Item</h3>
-		<hr />
-		<select name="" id="sel" >
-			<option value="16">16 round</option>
-			<option value="8">8 round</option>
-			<option value="4" selected>4 round</option>
-		</select>
-		<button onclick="startGame();">Start!</button>
-		<button onclick="location.href='https://opensea.io/'">Go to OpenSea</button>
+		<!-- wrap -->
 		<div id="wrap">
-			<div id="round-info"></div>
-			<div class="item">
-				<div>
-					<img onclick="selectImg(this)" id="left" src="" alt="" />
+		<!-- header -->
+			<div id="header">
+				<!-- header_tit -->
+				<div class="header_tit">
+					<h1>NFT WorldCup</h1>
+					<h3> Find out your favorite NFT Item</h3>
 				</div>
-				<div id="left-name"></div>
-			</div>
-			<div class="item">
-				<div>
-					<img onclick="selectImg(this)" id="right" src="" alt="" />
-				</div>
-				<div id="right-name"></div>
-			</div>
+				<!-- //header_tit -->
 
-			<div id="final">
-				<div>
-					<img src="" alt="" id="final-img" />
+				<!-- select -->
+				<section class = selectbox id="sel">
+					<button type="button" class="toggle_btn">
+						<span>Round #</span>
+						<img src="img/select1.png" alt="라운드 선택">
+					</button>
+					
+					<ul class="selectbox_option_hidden">
+						<li><button type="button" class="option_btn4" value="4"><span>4 round</span>
+							<img src="img/select3.png" alt="4라운드">
+						</button></li>
+						<li><button type="button" class="option_btn8" value="8"><span>8 round</span>
+							<img src="img/select4.png" alt="8라운드">
+						</button></li>
+						<li><button type="button" class="option_btn16" value="16"><span>16 round</span>
+							<img src="img/select5.png" alt="16라운드">
+						</button></li>	
+					</ul>
+				</section>
+				<!-- //select -->
+
+				<!-- start -->
+				<div class="start_btn"><button onclick="startGame();">
+					<img src="img/go.png" alt="시작버튼"><span>Start!</span></div>
+				</button>
+				<!-- //start -->
+			</div>
+		<!-- //header -->
+		
+			<!-- <select name="select" id="sel" >
+				<option value="16">16 round</option>
+				<option value="8">8 round</option>
+				<option value="4" selected>4 round</option>
+			</select> -->
+			<!-- <button onclick="startGame();">Start!</button> -->
+			<!-- <button onclick="location.href='https://opensea.io/'">Go to OpenSea</button> -->
+			<div id="cont_wrap">
+				<div id="round-info"></div>
+				<div class="item">
+					<div>
+						<img onclick="selectImg(this)" id="left" src="" alt="" />
+					</div>
+					<div id="left-name"></div>
 				</div>
-				<div id="final-name"></div>
+				<div class="item">
+					<div>
+						<img onclick="selectImg(this)" id="right" src="" alt="" />
+					</div>
+					<div id="right-name"></div>
+				</div>
+
+				<div id="final">
+					<div>
+						<img src="" alt="" id="final-img" />
+					</div>
+					<div id="final-name"></div>
+				</div>
 			</div>
 		</div>
-
 		<script>
 			var round; //사용자가 선택한 round -> 게임이 끝나는 시점
 			var gameArr; // 게임한번 진행시 사용할 배열
@@ -75,7 +115,7 @@
 				document.getElementsByClassName('item')[1].style.display = 'block';
 				document.getElementById('final').style.display = 'none';
 
-				document.getElementById('wrap').style.display = 'block';
+				document.getElementById('cont_wrap').style.display = 'block';
 				var sel = document.getElementById('sel').value;
 				round = sel;
 				count = 0;

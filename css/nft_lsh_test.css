@@ -1,4 +1,97 @@
+
 #wrap {
+    background: linear-gradient( rgba(82, 1, 255, 0.2) 0%, rgba(243, 101, 255, 0.182) 100%);
+}
+
+/* 헤더 타이틀 */
+.header_tit h1, h3 {
+    text-align: center; 
+    display:block;
+}
+.header_tit h1 {
+    padding: 40px 0 0;
+    background: linear-gradient(156.04deg, #5201FF 25.13%, rgba(113, 101, 255, 0.91) 68.46%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 8px;
+}
+
+.header_tit h3 {
+    background: linear-gradient(180deg, #5201FF 0%, rgba(243, 101, 255, 0.91) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+/* 셀렉트박스 */
+.selectbox {
+    text-align: center;
+    position: relative;
+}
+
+.toggle_btn {
+    border:0; padding: 0; margin: 0; background: none;
+    position: relative;
+    display: inline;
+    
+}
+
+.toggle_btn span {
+    position:absolute; left: 18px; top: 21px;
+    color: #7b42f8;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.toggle_btn:hover span{
+    color:rgb(0, 247, 255);
+}
+
+.selectbox_option_hidden {
+    display: none;
+}
+
+.selectbox_option_hidden img {
+margin-bottom: -4px;
+}
+
+.selectbox_option_hidden button {    
+    position: relative;
+}
+.selectbox_option_hidden li span {
+    position:absolute; left: 18px; top: 21px;
+    color: #7b42f8;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.selectbox_option_hidden button:hover span{
+    color:rgb(0, 247, 255);
+}
+
+/* 시작버튼 */
+.start_btn {
+    text-align: center;
+    margin-top: 55px;
+    
+}
+
+.start_btn button{
+    position: relative;
+}
+
+.start_btn span {
+    position: absolute;
+    left: 96px;
+    top: 17px;
+    color:#fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 컨텐츠 */
+#cont_wrap {
     width: 1000px;
     margin: 0 auto;
     display: none;
