@@ -1,6 +1,7 @@
 
 #wrap {
-    background: linear-gradient( rgba(82, 1, 255, 0.2) 0%, rgba(243, 101, 255, 0.182) 100%);
+    background: linear-gradient( rgba(149, 100, 255, 0.2) 0%, rgba(243, 101, 255, 0.182) 100%);
+    height: 1800px;
 }
 
 /* 헤더 타이틀 */
@@ -9,14 +10,16 @@
     display:block;
 }
 .header_tit h1 {
+    font-size: 50px;
     padding: 40px 0 0;
     background: linear-gradient(156.04deg, #5201FF 25.13%, rgba(113, 101, 255, 0.91) 68.46%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 8px;
+    margin-bottom: 10px;
 }
 
 .header_tit h3 {
+    font-size: 30px;
     background: linear-gradient(180deg, #5201FF 0%, rgba(243, 101, 255, 0.91) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,9 +40,9 @@
 }
 
 .toggle_btn span {
-    position:absolute; left: 18px; top: 21px;
+    position:absolute; left: 15px; top: 20px;
     color: #7b42f8;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -48,32 +51,32 @@
     color:rgb(0, 247, 255);
 }
 
-.selectbox_option_hidden {
+.hidden {
     display: none;
 }
 
-.selectbox_option_hidden img {
+#selectbox_option_hidden img {
 margin-bottom: -4px;
 }
 
-.selectbox_option_hidden button {    
+#selectbox_option_hidden button {    
     position: relative;
 }
-.selectbox_option_hidden li span {
+#selectbox_option_hidden li span {
     position:absolute; left: 18px; top: 21px;
     color: #7b42f8;
     font-size: 14px;
     font-weight: bold;
 }
 
-.selectbox_option_hidden button:hover span{
+#selectbox_option_hidden button:hover span{
     color:rgb(0, 247, 255);
 }
 
 /* 시작버튼 */
 .start_btn {
     text-align: center;
-    margin-top: 55px;
+    margin: 55px 0;
     
 }
 
@@ -83,11 +86,15 @@ margin-bottom: -4px;
 
 .start_btn span {
     position: absolute;
-    left: 96px;
-    top: 17px;
+    left: 89px;
+    top: 15px;
     color:#fff;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+}
+
+.start_btn button:hover span {
+    color:rgb(0, 247, 255);
 }
 
 /* 컨텐츠 */
@@ -97,22 +104,26 @@ margin-bottom: -4px;
     display: none;
     overflow: hidden;
 }
+
 #round-info {
     text-align: center;
-    background-color: black;
+    width: 998.5px;
+    background: linear-gradient(360deg, rgba(82, 1, 255, 0.96) 0.61%, #F365FF 100%);
     color: white;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .item {
     width: 500px;
     float: left;
     text-align: center;
-    border: 3px solid black;
+    border: 3px solid #5201FF;
+    margin-right: -1.5px ;
     box-sizing: border-box;
 }
 .item > div > img {
     width: 400px;
+    height: 400px;
 }
 .item > div:last-child,
 #final-name {
@@ -120,6 +131,12 @@ margin-bottom: -4px;
     padding: 20px;
     background-color: rgb(252, 158, 231);
 }
+#final-link {
+    font-size: 30px;
+    padding: 20px;
+    background-color: rgb(252, 158, 231);
+}
+
 #final {
     text-align: center;
     display: none;
