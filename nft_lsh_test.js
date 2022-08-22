@@ -67,17 +67,23 @@ function Round4(){
     var value = option_btn4.value;
     localStorage.setItem("sel", value);
     text4.style.color = "rgb(0, 247, 255)";
+    text8.style.color = "#7b42f8";
+    text16.style.color = "#7b42f8";
 }
 
 function Round8(){
     var value = option_btn8.value;
     localStorage.setItem("sel", value);
+    text4.style.color = "#7b42f8";
     text8.style.color = "rgb(0, 247, 255)";
+    text16.style.color = "#7b42f8";
 }
 
 function Round16(){
     var value = option_btn16.value;
     localStorage.setItem("sel", value);
+    text4.style.color = "#7b42f8";
+    text8.style.color = "#7b42f8";
     text16.style.color = "rgb(0, 247, 255)";
 }
 
